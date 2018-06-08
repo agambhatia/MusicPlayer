@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3022A720C94A8A007E85E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022A620C94A8A007E85E3 /* HomeViewController.swift */; };
+		DA3022A920C94A9E007E85E3 /* HomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */; };
+		DA3022AB20C94AA9007E85E3 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022AA20C94AA9007E85E3 /* HomeItem.swift */; };
+		DA3022AD20C94BD8007E85E3 /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */; };
+		DA3022B020C94D0D007E85E3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3022AE20C94D0D007E85E3 /* Home.storyboard */; };
+		DA3022B320C95151007E85E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022B220C95151007E85E3 /* Constants.swift */; };
 		DAF587E020C7BA970077AF7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF587DF20C7BA970077AF7D /* AppDelegate.swift */; };
-		DAF587E220C7BA970077AF7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF587E120C7BA970077AF7D /* ViewController.swift */; };
 		DAF587E520C7BA970077AF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E320C7BA970077AF7D /* Main.storyboard */; };
 		DAF587E720C7BA9C0077AF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E620C7BA9C0077AF7D /* Assets.xcassets */; };
 		DAF587EA20C7BA9C0077AF7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E820C7BA9C0077AF7D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3022A620C94A8A007E85E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA3022AA20C94AA9007E85E3 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		DA3022AF20C94D0D007E85E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Jingles/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		DA3022B220C95151007E85E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAF587DC20C7BA970077AF7D /* Jingles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jingles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF587DF20C7BA970077AF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAF587E120C7BA970077AF7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAF587E420C7BA970077AF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF587E620C7BA9C0077AF7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF587E920C7BA9C0077AF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA3022A220C94A5F007E85E3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA3022A520C94A7D007E85E3 /* Model */,
+				DA3022A420C94A77007E85E3 /* View */,
+				DA3022A320C94A71007E85E3 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DA3022A320C94A71007E85E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA3022A620C94A8A007E85E3 /* HomeViewController.swift */,
+				DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA3022A420C94A77007E85E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA3022AE20C94D0D007E85E3 /* Home.storyboard */,
+				DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA3022A520C94A7D007E85E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA3022AA20C94AA9007E85E3 /* HomeItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA3022B120C9513D007E85E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA3022B220C95151007E85E3 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DAF587D320C7BA960077AF7D = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +108,13 @@
 		DAF587DE20C7BA970077AF7D /* Jingles */ = {
 			isa = PBXGroup;
 			children = (
-				DAF587DF20C7BA970077AF7D /* AppDelegate.swift */,
-				DAF587E120C7BA970077AF7D /* ViewController.swift */,
-				DAF587E320C7BA970077AF7D /* Main.storyboard */,
-				DAF587E620C7BA9C0077AF7D /* Assets.xcassets */,
-				DAF587E820C7BA9C0077AF7D /* LaunchScreen.storyboard */,
+				DA3022B120C9513D007E85E3 /* Helpers */,
+				DA3022A220C94A5F007E85E3 /* Home */,
 				DAF587EB20C7BA9C0077AF7D /* Info.plist */,
+				DAF587E620C7BA9C0077AF7D /* Assets.xcassets */,
+				DAF587E320C7BA970077AF7D /* Main.storyboard */,
+				DAF587DF20C7BA970077AF7D /* AppDelegate.swift */,
+				DAF587E820C7BA9C0077AF7D /* LaunchScreen.storyboard */,
 			);
 			path = Jingles;
 			sourceTree = "<group>";
@@ -125,6 +180,7 @@
 				DAF587EA20C7BA9C0077AF7D /* LaunchScreen.storyboard in Resources */,
 				DAF587E720C7BA9C0077AF7D /* Assets.xcassets in Resources */,
 				DAF587E520C7BA970077AF7D /* Main.storyboard in Resources */,
+				DA3022B020C94D0D007E85E3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,14 +191,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF587E220C7BA970077AF7D /* ViewController.swift in Sources */,
 				DAF587E020C7BA970077AF7D /* AppDelegate.swift in Sources */,
+				DA3022AB20C94AA9007E85E3 /* HomeItem.swift in Sources */,
+				DA3022A720C94A8A007E85E3 /* HomeViewController.swift in Sources */,
+				DA3022A920C94A9E007E85E3 /* HomeItemCollectionViewCell.swift in Sources */,
+				DA3022AD20C94BD8007E85E3 /* HomeViewController+CollectionView.swift in Sources */,
+				DA3022B320C95151007E85E3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DA3022AE20C94D0D007E85E3 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA3022AF20C94D0D007E85E3 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
 		DAF587E320C7BA970077AF7D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coppermobile.Jingles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coppermobile.Jingles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
