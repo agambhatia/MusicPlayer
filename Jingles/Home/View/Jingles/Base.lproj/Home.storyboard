@@ -75,7 +75,7 @@
                                         <connections>
                                             <outlet property="artistNameLabel" destination="uLO-Hx-7Tl" id="nXb-yN-XQ0"/>
                                             <outlet property="imageView" destination="YXj-2J-BLN" id="svc-dS-2cN"/>
-                                            <outlet property="songTitleLabel" destination="DY9-i5-W71" id="X8Q-fu-E2Q"/>
+                                            <outlet property="songTitleLabel" destination="DY9-i5-W71" id="VnM-wR-W5h"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAS-ye-lRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-743.20000000000005" y="390.85457271364322"/>
+            <point key="canvasLocation" x="-1185" y="415"/>
         </scene>
     </scenes>
 </document>

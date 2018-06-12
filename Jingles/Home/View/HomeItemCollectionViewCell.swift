@@ -23,6 +23,7 @@ class HomeItemCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet var imageView: UIImageView!
+   
     @IBOutlet var songTitleLabel: UILabel!
     @IBOutlet var artistNameLabel: UILabel!
     
