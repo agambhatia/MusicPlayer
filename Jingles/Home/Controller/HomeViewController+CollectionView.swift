@@ -10,9 +10,11 @@ import UIKit
 
 // MARK: CollectionView Methods
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDataSource {
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return items.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -20,21 +22,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let sectionItem = items[section]
-        return sectionItem.count
+        return 10
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let sectionItem = items[indexPath.section]
-        let rowItem = sectionItem[indexPath.row]
-        
         guard let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeItemCollectionViewCell.identifier,
                                                                 for: indexPath) as? HomeItemCollectionViewCell else {
                                                                     return UICollectionViewCell()
-        }
+        }	
         
-        itemCell.set(with: rowItem)
-        
+        itemCell.songTitleLabel?.text = Source.URLs.songs[indexPath.row]
+        itemCell.artistNameLabel?.text = " Unkown"
+        itemCell.imageView?.image = #imageLiteral(resourceName: "AlbumArtSmall.jpg")
         return itemCell
     }
     
@@ -49,8 +49,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return UIEdgeInsets.zero
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.zero
-    }
+  //  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  //      return homeCollectionView.bounds.size
+   // }
 }
 

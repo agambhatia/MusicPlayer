@@ -9,6 +9,7 @@
 import UIKit
 
 struct HomeItem {
+    
     var songTitle: String
     
     

@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2EFD3A20D23D5200025223 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */; };
+		DA2EFD3C20D24A1F00025223 /* HomeViewController+TablelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */; };
 		DA3022A720C94A8A007E85E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022A620C94A8A007E85E3 /* HomeViewController.swift */; };
 		DA3022A920C94A9E007E85E3 /* HomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */; };
 		DA3022AB20C94AA9007E85E3 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022AA20C94AA9007E85E3 /* HomeItem.swift */; };
 		DA3022AD20C94BD8007E85E3 /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */; };
 		DA3022B020C94D0D007E85E3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3022AE20C94D0D007E85E3 /* Home.storyboard */; };
 		DA3022B320C95151007E85E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022B220C95151007E85E3 /* Constants.swift */; };
+		DA9515EF20D0F85500A7807D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9515EE20D0F85500A7807D /* Source.swift */; };
+		DA9515F120D0F98600A7807D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9515F020D0F98600A7807D /* Album.swift */; };
+		DA9515F320D0FA1A00A7807D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9515F220D0FA1A00A7807D /* Artist.swift */; };
+		DA9515F520D0FA7F00A7807D /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9515F420D0FA7F00A7807D /* Genre.swift */; };
+		DA9515F720D0FB2500A7807D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9515F620D0FB2500A7807D /* Song.swift */; };
 		DAF587E020C7BA970077AF7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF587DF20C7BA970077AF7D /* AppDelegate.swift */; };
 		DAF587E520C7BA970077AF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E320C7BA970077AF7D /* Main.storyboard */; };
 		DAF587E720C7BA9C0077AF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E620C7BA9C0077AF7D /* Assets.xcassets */; };
@@ -46,12 +53,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TablelView.swift"; sourceTree = "<group>"; };
 		DA3022A620C94A8A007E85E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA3022AA20C94AA9007E85E3 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 		DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		DA3022AF20C94D0D007E85E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Jingles/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		DA3022B220C95151007E85E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA9515EE20D0F85500A7807D /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		DA9515F020D0F98600A7807D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		DA9515F220D0FA1A00A7807D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		DA9515F420D0FA7F00A7807D /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		DA9515F620D0FB2500A7807D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		DAF587DC20C7BA970077AF7D /* Jingles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jingles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF587DF20C7BA970077AF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF587E420C7BA970077AF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +125,7 @@
 			children = (
 				DA3022A620C94A8A007E85E3 /* HomeViewController.swift */,
 				DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */,
+				DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +135,7 @@
 			children = (
 				DA3022AE20C94D0D007E85E3 /* Home.storyboard */,
 				DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */,
+				DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +145,11 @@
 			children = (
 				DA3022AA20C94AA9007E85E3 /* HomeItem.swift */,
 				DAFC404D20CF9F6900CA3DAB /* LibraryManager.swift */,
+				DA9515EE20D0F85500A7807D /* Source.swift */,
+				DA9515F020D0F98600A7807D /* Album.swift */,
+				DA9515F220D0FA1A00A7807D /* Artist.swift */,
+				DA9515F420D0FA7F00A7807D /* Genre.swift */,
+				DA9515F620D0FB2500A7807D /* Song.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,11 +340,18 @@
 			files = (
 				DAFC404C20CF9EFF00CA3DAB /* HomeTabBarViewController.swift in Sources */,
 				DAF587E020C7BA970077AF7D /* AppDelegate.swift in Sources */,
+				DA2EFD3A20D23D5200025223 /* HomeTableViewCell.swift in Sources */,
 				DA3022AB20C94AA9007E85E3 /* HomeItem.swift in Sources */,
+				DA9515F520D0FA7F00A7807D /* Genre.swift in Sources */,
 				DA3022A720C94A8A007E85E3 /* HomeViewController.swift in Sources */,
 				DA3022A920C94A9E007E85E3 /* HomeItemCollectionViewCell.swift in Sources */,
+				DA9515F320D0FA1A00A7807D /* Artist.swift in Sources */,
+				DA9515F120D0F98600A7807D /* Album.swift in Sources */,
+				DA9515EF20D0F85500A7807D /* Source.swift in Sources */,
 				DA3022AD20C94BD8007E85E3 /* HomeViewController+CollectionView.swift in Sources */,
 				DA3022B320C95151007E85E3 /* Constants.swift in Sources */,
+				DA9515F720D0FB2500A7807D /* Song.swift in Sources */,
+				DA2EFD3C20D24A1F00025223 /* HomeViewController+TablelView.swift in Sources */,
 				DAFC404E20CF9F6900CA3DAB /* LibraryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

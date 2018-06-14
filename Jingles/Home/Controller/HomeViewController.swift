@@ -17,14 +17,14 @@ class HomeViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet var collectionView: UICollectionView!
-    
+    @IBOutlet var tableView: UITableView!
+
     
     // MARK: Properties
     
     var items: [[HomeItem]] = [] {
         didSet {
-            collectionView.reloadData()
+            //homeCollectionView.reloadData()
         }
     }
 
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         
         let audioInfo = MPNowPlayingInfoCenter.default()
         print(audioInfo)
-        let audioPath:NSURL? = Bundle.main.url(forResource: "01", withExtension: "mp3") as? NSURL
+        let audioPath:NSURL? = Bundle.main.url(forResource: "01_01", withExtension: "mp3") as? NSURL
         
         
         //println("Playing \(audioPath)")
@@ -47,34 +47,9 @@ class HomeViewController: UIViewController {
         let playerItem = AVPlayerItem(url: audioPath! as URL)
         let song = Song(from: playerItem)
         print(song)
-        
-//        let metadataList = playerItem.asset.metadata
-//
-//
-//        for item in metadataList {
-//
-//
-//            guard let key = item.commonKey, let value = item.value else{
-//                continue
-//            }
-//            print("\(key.rawValue)")
-//
-//
-//            switch key.rawValue {
-//            case "albumName" : print("\(value)")
-//            case "artist" : print("\(value)")
-//            case "title" : print("\(value)")
-//            case "type" : print("\(value)")
-//            case "artwork" : print(" image")
-//            default: print("\(value)")
-//
-//                continue
-//            }
-//        }
     }
-
+    // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
