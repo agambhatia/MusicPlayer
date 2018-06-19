@@ -10,13 +10,17 @@ import UIKit
 import AVFoundation
 class LibraryManager {
     
+    static let shared = LibraryManager()
+    
     var atists: [Artist] = []
     var songs : [Song] = []
     var album : [Album] = []
     var genre: [Genre] = []
     
+    
+    private init() {}
 }
-var yourLibrary = LibraryManager()
+
 
 
 

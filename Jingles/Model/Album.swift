@@ -10,13 +10,11 @@ import UIKit
 
 struct Album {
     var title: String
-    var image: String
+    var image: UIImage?
     var songs: [Song]
 
     
     
     
-    var imageURL: URL? {
-        return URL(string: image)
-    }
+    
 }

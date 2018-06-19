@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 // MARK: CollectionView Methods
 
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -22,7 +23,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return Source.URLs.songs.count
     
     }
     
@@ -32,22 +33,31 @@ extension HomeViewController: UICollectionViewDataSource {
                                                                     return UICollectionViewCell()
         }	
         
-        itemCell.songTitleLabel?.text = Source.URLs.songs[indexPath.row]
-        itemCell.artistNameLabel?.text = " Unkown"
-        itemCell.imageView?.image = #imageLiteral(resourceName: "AlbumArtSmall.jpg")
+       
+        
+        itemCell.songTitleLabel?.text = LibraryManager.shared.songs[indexPath.row].title
+        itemCell.artistNameLabel?.text = LibraryManager.shared.songs[indexPath.row].artist
+        itemCell.imageView?.image = LibraryManager.shared.songs[indexPath.row].albumArt
         return itemCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sectionItem = items[indexPath.section]
-        let rowItem = sectionItem[indexPath.row]
+        let rowItem = LibraryManager.shared.songs[indexPath.row]
         
-        print("User selected \(rowItem)")
+        print(rowItem.fileURL)
+        playSound(withAudioPath:rowItem.fileURL)
+        
+    
+            print("User selected \(rowItem.title)")
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
+        
+    
+    
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets.zero
+//    }
     
   //  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
   //      return homeCollectionView.bounds.size

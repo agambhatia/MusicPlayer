@@ -10,14 +10,13 @@ import UIKit
 import AVFoundation
 import MediaPlayer
 
-
-
-class HomeViewController: UIViewController {
-
-
+class HomeViewController: UIViewController{
+    
+    
     // MARK: Outlets
     
     @IBOutlet var tableView: UITableView!
+    
 
     
     // MARK: Properties
@@ -27,29 +26,53 @@ class HomeViewController: UIViewController {
             //homeCollectionView.reloadData()
         }
     }
-
+    
     
     // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         let audioInfo = MPNowPlayingInfoCenter.default()
         print(audioInfo)
-        let audioPath:NSURL? = Bundle.main.url(forResource: "01_01", withExtension: "mp3") as? NSURL
+        for i in 0...Source.URLs.songs.count-1{
+            guard let audioPath: URL = (Bundle.main.url(forResource: Source.URLs.songs[i], withExtension: "mp3")) else {
+                return
+            }
+            let playerItem = AVPlayerItem(url: audioPath)
+            let song = Song(from: playerItem, url: audioPath)
+            LibraryManager.shared.songs.append(song!)
+        }
+    }
+  
+    
+    func playSound(withAudioPath: URL ) {
+        var player: AVAudioPlayer?
         
-        
-        //println("Playing \(audioPath)")
-        
-        
-        let playerItem = AVPlayerItem(url: audioPath! as URL)
-        let song = Song(from: playerItem)
-        print(song)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            
+            
+            
+            player = try AVAudioPlayer(contentsOf: withAudioPath, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            
+            
+            
+            
+            player?.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
+

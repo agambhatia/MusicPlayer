@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 
 struct Song {
+    var fileURL: URL
     var title: String
     var genre: String
     var album: String
     var artist: String
-    var albumArt: String
+    var albumArt: UIImage?
+
     
     var description: String {
         return "Song named \(title), sung by \(artist)"
@@ -31,16 +33,17 @@ struct Song {
         return Genre(stringRawValue: genre)
     }
     
-    init?(from playerItem: AVPlayerItem) {
+    init?(from playerItem: AVPlayerItem, url: URL) {
         let metadataList = playerItem.asset.metadata
-        
-        
         var title: String = String()
         var genre: String = String()
-        var albumArt: String = String()
+        var albumArt: UIImage? = nil
         var artistName: String = String()
         var albumName: String = String()
         
+       
+        
+      
         for item in metadataList {
             guard let key = item.commonKey,
                 let value = item.value else {
@@ -70,11 +73,13 @@ struct Song {
                 title=songTitle
                 
             case Source.AVItemKeys.artwork:
-                guard let artwork = value as? String, !artwork.isEmpty else {
-                    albumArt = "unknown"
+                guard let artworkData = value as? Data,
+                    let image = UIImage(data: artworkData) else {
+                    albumArt = nil
                     break
                 }
-                albumArt = artwork
+                
+                albumArt = image
                 
             case Source.AVItemKeys.type:
                 guard let type = value as? String else {
@@ -86,10 +91,12 @@ struct Song {
                 continue
             }
         }
-        self.genre=genre
+        
+        self.fileURL = url
+        self.genre = genre
         self.title = title
-        self.album=albumName
-        self.artist=artistName
-        self.albumArt=albumArt
+        self.album = albumName
+        self.artist = artistName
+        self.albumArt = albumArt
     }
 }

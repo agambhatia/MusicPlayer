@@ -21,8 +21,6 @@ struct Source {
         static let albumName = "albumName"
     }
     
-    func callGetData(){
-        
-    }
+    
     
 }
