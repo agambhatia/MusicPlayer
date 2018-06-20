@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2A8B2220DA2D4400B06A1C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A8B2120DA2D4400B06A1C /* SearchViewController.swift */; };
 		DA2EFD3A20D23D5200025223 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */; };
 		DA2EFD3C20D24A1F00025223 /* HomeViewController+TablelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */; };
 		DA3022A720C94A8A007E85E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3022A620C94A8A007E85E3 /* HomeViewController.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA2A8B2120DA2D4400B06A1C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TablelView.swift"; sourceTree = "<group>"; };
 		DA3022A620C94A8A007E85E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				DA3022A620C94A8A007E85E3 /* HomeViewController.swift */,
 				DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */,
 				DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */,
+				DA2A8B2120DA2D4400B06A1C /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				DA9515F320D0FA1A00A7807D /* Artist.swift in Sources */,
 				DA9515F120D0F98600A7807D /* Album.swift in Sources */,
 				DA9515EF20D0F85500A7807D /* Source.swift in Sources */,
+				DA2A8B2220DA2D4400B06A1C /* SearchViewController.swift in Sources */,
 				DA3022AD20C94BD8007E85E3 /* HomeViewController+CollectionView.swift in Sources */,
 				DA3022B320C95151007E85E3 /* Constants.swift in Sources */,
 				DA9515F720D0FB2500A7807D /* Song.swift in Sources */,

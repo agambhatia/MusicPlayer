@@ -11,6 +11,8 @@ import AVFoundation
 import MediaPlayer
 
 class HomeViewController: UIViewController{
+   
+    var player: AVAudioPlayer?
     
     
     // MARK: Outlets
@@ -49,7 +51,7 @@ class HomeViewController: UIViewController{
   
     
     func playSound(withAudioPath: URL ) {
-        var player: AVAudioPlayer?
+        
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
