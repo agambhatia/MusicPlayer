@@ -12,7 +12,7 @@ import MediaPlayer
 
 class HomeViewController: UIViewController{
    
-    var player: AVAudioPlayer?
+    
     
     
     // MARK: Outlets
@@ -50,28 +50,7 @@ class HomeViewController: UIViewController{
     }
   
     
-    func playSound(withAudioPath: URL ) {
-        
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            
-            
-            
-            player = try AVAudioPlayer(contentsOf: withAudioPath, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            
-            
-            
-            
-            player?.play()
-            
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
+    
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

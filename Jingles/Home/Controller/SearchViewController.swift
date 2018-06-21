@@ -8,21 +8,28 @@
 
 import UIKit
 
+typealias SearchItem = (title: String, url: URL)
+
 class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate, UITableViewDataSource {
     
     @IBOutlet var searchBar: UISearchBar!
-    
     @IBOutlet var tableView: UITableView!
     
-    var searchActive: Bool = false
     
-    var data: [String] = []
+    var searchActive: Bool = false {
+        didSet {
+            if !searchActive {
+                filtered = []
+            }
+        }
+    }
     
-    var filtered: [String] = []
-    var flag: Bool = false
-    var flag2: Bool = false
-    
-    
+    var source: [SearchItem] = []
+    var filtered: [SearchItem] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,28 +38,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
         searchBar.delegate = self
         
-        
-        if 	searchBar.selectedScopeButtonIndex == 0{
-            for i in 0...Source.URLs.songs.count-1{
-            let trackTitle = LibraryManager.shared.songs[i].title
-            data.append(trackTitle)
-                self.tableView.reloadData()
-        }
-        }
-        else if searchBar.selectedScopeButtonIndex == 1{
-            for i in 0...LibraryManager.shared.atists.count-1{
-                let artistTitle = LibraryManager.shared.songs[i].artist
-                data.append(artistTitle)
-                print("\(LibraryManager.shared.atists.count)")
-                self.tableView.reloadData()
-            }
-        }
-        
-
+        source = LibraryManager.shared.songs.map { (title: $0.title, url: $0.fileURL) }
     }
-    
-    
-    
     
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -62,15 +49,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false
     }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
-        flag = false
-        flag2 = true
-        print("1")
-        searchBar.text = ""
+        searchBar.text = nil
         searchBar.endEditing(true)
-        self.tableView.reloadData()
-     
     }
    
     
@@ -79,20 +62,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filtered = data.filter({ (text) -> Bool in
-            let tmp: NSString = text as NSString
-            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
-            return range.location != NSNotFound
+        filtered = source.filter({ (searchedItems) -> Bool in
+            return searchedItems.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased().contains(searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())
         })
-        
-        if(filtered.count == 0){
-            searchActive = false
-            flag = true
-        }else {
-            searchActive = true
-        }
-        self.tableView.reloadData()
     }
 
     
@@ -118,52 +90,64 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewController")
-        cell?.textLabel?.textColor = UIColor.white
-        cell?.textLabel?.highlightedTextColor = UIColor.orange
-        cell?.backgroundColor = UIColor.black
-        
-        if(searchActive){
-            cell?.textLabel?.text = filtered[indexPath.row]
-        }
-        else if(!searchActive && flag)
-        {
-            cell?.textLabel?.text = "No Mathes Found"
-        }
-         else if flag2 == true
-         {
-            cell?.textLabel?.text = data[indexPath.row]
-         }
-        else {
-            cell?.textLabel?.text = data[indexPath.row]
-        }
-      
-        return cell!
-        
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(searchActive)
+        if searchActive
         {
-            return filtered.count
+            return filtered.isEmpty ? 1 : filtered.count
         }
-            else if(!searchActive && flag)
+        else
         {
-            return 1
-        }
-            else if (flag2 == true)
-            {
-                return data.count
-            }
-        else{
-        return data.count
+            return LibraryManager.shared.songs.map { (title: $0.title, url: $0.fileURL) }.count
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewController") else {
+            return UITableViewCell()
+        }
+        
+        cell.backgroundColor = UIColor.black
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.highlightedTextColor = UIColor.orange
+        
+        let text: String
+        if searchActive {
+            if filtered.isEmpty {
+                text = "No Match Found"
+                cell.isUserInteractionEnabled = false
+                
+            } else {
+                text = filtered[indexPath.row].title
+                cell.isUserInteractionEnabled = true
+            }
+        }
+        else
+        {
+           text = source[indexPath.row].title
+            cell.isUserInteractionEnabled = true
+        }
+        cell.textLabel?.text = text
 
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let title: String
+        let url:URL
+        if searchActive {
+            title = filtered[indexPath.row].title
+            url = filtered[indexPath.row].url
+        }
+        else
+        {
+            title = source[indexPath.row].title
+            url = source[indexPath.row].url
+        }
+       
+        MusicPlayer.playSound(withAudioPath: url)
+        
+    }
 }

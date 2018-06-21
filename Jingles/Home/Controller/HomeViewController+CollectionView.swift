@@ -45,7 +45,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let rowItem = LibraryManager.shared.songs[indexPath.row]
         
         print(rowItem.fileURL)
-        playSound(withAudioPath:rowItem.fileURL)
+        MusicPlayer.playSound(withAudioPath: rowItem.fileURL)
         
     
             print("User selected \(rowItem.title)")
