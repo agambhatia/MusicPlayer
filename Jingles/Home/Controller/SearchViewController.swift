@@ -8,9 +8,11 @@
 
 import UIKit
 
-typealias SearchItem = (title: String, url: URL)
+typealias SearchItem = Song
 
 class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate, UITableViewDataSource {
+    
+    var song: Song?
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
@@ -38,7 +40,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
         searchBar.delegate = self
         
-        source = LibraryManager.shared.songs.map { (title: $0.title, url: $0.fileURL) }
+        source = LibraryManager.shared.songs
     }
     
     
@@ -99,7 +101,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         }
         else
         {
-            return LibraryManager.shared.songs.map { (title: $0.title, url: $0.fileURL) }.count
+            return LibraryManager.shared.songs.count
         }
     }
     
@@ -135,19 +137,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let title: String
-        let url:URL
+        
+        
         if searchActive {
-            title = filtered[indexPath.row].title
-            url = filtered[indexPath.row].url
+            song = filtered[indexPath.row]
         }
         else
         {
-            title = source[indexPath.row].title
-            url = source[indexPath.row].url
+            song = source[indexPath.row]
         }
        
-        MusicPlayer.playSound(withAudioPath: url)
+      MusicPlayer.shared.play(song: song!)
         
     }
 }
