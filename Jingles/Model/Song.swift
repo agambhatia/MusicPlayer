@@ -17,7 +17,6 @@ struct Song {
     var artist: String
     var albumArt: UIImage?
 
-    
     var description: String {
         return "Song named \(title), sung by \(artist)"
     }
@@ -26,11 +25,17 @@ struct Song {
         if album.isEmpty {
             return nil
         }
-        return Album(title: album, image: albumArt, songs: [self])
+        return Album(title: album, songs: [self], image: albumArt)
     }
     
     var genreAbsolute: Genre {
         return Genre(stringRawValue: genre)
+    }
+    var artistAbsolute: Artist? {
+        if artist.isEmpty {
+            return nil
+        }
+        return Artist(name: artist, songs: [self])
     }
     
     init?(from playerItem: AVPlayerItem, url: URL) {
@@ -40,16 +45,13 @@ struct Song {
         var albumArt: UIImage? = nil
         var artistName: String = String()
         var albumName: String = String()
-        
-       
-        
       
         for item in metadataList {
             guard let key = item.commonKey,
                 let value = item.value else {
                     continue
             }
-            print("\(key.rawValue)")
+           
             
             
             switch key.rawValue {

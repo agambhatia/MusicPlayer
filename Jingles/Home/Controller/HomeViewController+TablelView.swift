@@ -15,8 +15,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
         
         return cell
-        
-        
     }
     
     
@@ -41,14 +39,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-//        view.tintColor = UIColor.init(red: 255.0/255.0, green: 165.0/255.0, blue: 48.0/255.0, alpha: 1)
-//        view.tintColor = UIColor.init(red: 255.0/255.0, green: 165.0/255.0, blue: 0.0, alpha: 0.5)
         view.tintColor = UIColor.black
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
         header.textLabel?.textAlignment = .center
-        
-        
+       
     }
     
 }

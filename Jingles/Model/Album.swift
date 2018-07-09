@@ -10,11 +10,10 @@ import UIKit
 
 struct Album {
     var title: String
-    var image: UIImage?
     var songs: [Song]
+    var image: UIImage?
 
-    
-    
-    
-    
+    mutating func include(song: Song) {
+        songs.append(song)
+    }
 }

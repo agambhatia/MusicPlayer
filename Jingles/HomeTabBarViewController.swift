@@ -12,15 +12,28 @@ class HomeTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       LibraryManager.shared.initialise()
+        
+        
 
         // Do any additional setup after loading the view.
+        
+        let originX: CGFloat = 0.0
+        let controller:MiniPlayerViewController = self.storyboard!.instantiateViewController(withIdentifier: "MiniPlayerViewController") as! MiniPlayerViewController
+        let height: CGFloat = 67.0  //controller.view.bounds.height
+        let width = controller.view.bounds.width
+        let originY = view.bounds.height - tabBar.bounds.height - height
+        
+       controller.view.frame = CGRect(x: originX, y: originY, width: width, height: height)
+    
+        self.view.addSubview(controller.view)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

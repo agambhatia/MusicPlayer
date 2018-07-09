@@ -10,6 +10,7 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
+
 public class MusicPlayer {
     
     static let shared = MusicPlayer()
@@ -18,8 +19,7 @@ public class MusicPlayer {
     var nextSong: Song?
     var prevSong: Song?
     var player: AVAudioPlayer?
-   
-    
+
     func play(song: Song ) {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
@@ -35,9 +35,7 @@ public class MusicPlayer {
             player.play()
             fetchNextSong()
             fetchPrevSong()
-            
-            
-    
+
         } catch let error {
             print(error.localizedDescription)
         }
@@ -76,7 +74,5 @@ public class MusicPlayer {
         }
         
     }
-    
- 
     
 }

@@ -10,6 +10,10 @@ import UIKit
 
 struct Artist {
     var name: String
-    var albums: [Album]
+    var songs: [Song]
+    
+    mutating func include(song: Song) {
+        songs.append(song)
+    }
     
 }
