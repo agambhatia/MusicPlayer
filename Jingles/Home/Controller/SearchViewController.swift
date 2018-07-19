@@ -25,7 +25,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
             }
         }
     }
-    
     var source: [SearchItem] = []
     var filtered: [SearchItem] = [] {
         didSet {
@@ -35,14 +34,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 67.0, 0.0)
         tableView.delegate = self
-    
         searchBar.delegate = self
-        
         source = LibraryManager.shared.songs
     }
-    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true
@@ -51,33 +47,24 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
         searchBar.text = nil
         searchBar.endEditing(true)
     }
-   
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
     }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtered = source.filter({ (searchedItems) -> Bool in
             return searchedItems.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased().contains(searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())
         })
     }
 
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -87,8 +74,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         // Pass the selected object to the new view controller.
     }
     */
-    
-   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -138,8 +123,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        if searchActive {
+        if searchActive && filtered.isEmpty == false{
             song = filtered[indexPath.row]
         }
         else

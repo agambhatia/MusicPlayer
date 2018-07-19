@@ -27,6 +27,7 @@ class DiscoverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 67.0, 0.0)
         tableView.tableFooterView = UIView()
     }
     
@@ -35,17 +36,14 @@ class DiscoverViewController: UIViewController {
         let url = track.previewURL
         let player = AVPlayer(url: url)
         playerViewController.player = player
-        MusicPlayer.shared.player?.pause()
         player.play()
         present(playerViewController, animated: true, completion: nil)
-       
     }
-    
 }
 
 // MARK: - UITableView
-
 extension DiscoverViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
     }
@@ -68,16 +66,9 @@ extension DiscoverViewController: UITableViewDataSource, UITableViewDelegate {
     
     // When user taps cell, play the local file, if it's downloaded
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        MusicPlayer.shared.player?.pause()
+        MusicPlayer.shared.delegate?.didPlaySong(played: false)
         let track = searchResults[indexPath.row]
         playFromWeb(track)
-        
-        
-//        if track.downloaded {
-//            playDownload(track)
-//        }
-        
-       // tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-

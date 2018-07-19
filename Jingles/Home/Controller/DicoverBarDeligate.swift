@@ -43,3 +43,4 @@ extension DiscoverViewController: UISearchBarDelegate {
         view.removeGestureRecognizer(tapRecognizer)
     }
 }
+

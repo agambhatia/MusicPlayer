@@ -28,6 +28,28 @@
 		DA9A902120EA28C8008CF4D9 /* AllSongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A902020EA28C7008CF4D9 /* AllSongsTableViewController.swift */; };
 		DA9A902720EA512B008CF4D9 /* AlbumCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A902620EA512B008CF4D9 /* AlbumCellCollectionViewCell.swift */; };
 		DAAD70A520F3656F00CC05A2 /* MiniPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD70A420F3656F00CC05A2 /* MiniPlayerViewController.swift */; };
+		DAB3547420FF215500A1EB68 /* 02_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3546B20FF215500A1EB68 /* 02_01.mp3 */; };
+		DAB3547520FF215500A1EB68 /* 02_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3546C20FF215500A1EB68 /* 02_02.mp3 */; };
+		DAB3547620FF215500A1EB68 /* 02_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3546D20FF215500A1EB68 /* 02_03.mp3 */; };
+		DAB3547720FF215500A1EB68 /* 02_04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3546E20FF215500A1EB68 /* 02_04.mp3 */; };
+		DAB3547820FF215500A1EB68 /* 02_05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3546F20FF215500A1EB68 /* 02_05.mp3 */; };
+		DAB3547920FF215500A1EB68 /* 02_06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547020FF215500A1EB68 /* 02_06.mp3 */; };
+		DAB3547A20FF215500A1EB68 /* 02_07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547120FF215500A1EB68 /* 02_07.mp3 */; };
+		DAB3547B20FF215500A1EB68 /* 02_08.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547220FF215500A1EB68 /* 02_08.mp3 */; };
+		DAB3547C20FF215500A1EB68 /* 02_09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547320FF215500A1EB68 /* 02_09.mp3 */; };
+		DAB3548520FF215B00A1EB68 /* 03_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547E20FF215B00A1EB68 /* 03_01.mp3 */; };
+		DAB3548620FF215B00A1EB68 /* 03_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3547F20FF215B00A1EB68 /* 03_02.mp3 */; };
+		DAB3548720FF215B00A1EB68 /* 03_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548020FF215B00A1EB68 /* 03_03.mp3 */; };
+		DAB3548820FF215B00A1EB68 /* 03_04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548120FF215B00A1EB68 /* 03_04.mp3 */; };
+		DAB3548920FF215B00A1EB68 /* 03_05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548220FF215B00A1EB68 /* 03_05.mp3 */; };
+		DAB3548A20FF215B00A1EB68 /* 03_06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548320FF215B00A1EB68 /* 03_06.mp3 */; };
+		DAB3548B20FF215B00A1EB68 /* 03_07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548420FF215B00A1EB68 /* 03_07.mp3 */; };
+		DAB3549320FF225000A1EB68 /* 04_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548D20FF224F00A1EB68 /* 04_01.mp3 */; };
+		DAB3549420FF225000A1EB68 /* 04_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548E20FF224F00A1EB68 /* 04_02.mp3 */; };
+		DAB3549520FF225000A1EB68 /* 04_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3548F20FF224F00A1EB68 /* 04_03.mp3 */; };
+		DAB3549620FF225000A1EB68 /* 04_04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3549020FF224F00A1EB68 /* 04_04.mp3 */; };
+		DAB3549720FF225000A1EB68 /* 04_05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3549120FF224F00A1EB68 /* 04_05.mp3 */; };
+		DAB3549820FF225000A1EB68 /* 04_06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB3549220FF224F00A1EB68 /* 04_06.mp3 */; };
 		DACB311620E3B4B30012404F /* YourLibaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB311520E3B4B20012404F /* YourLibaryTableViewController.swift */; };
 		DAD7C07C20DB84E8000BE1E5 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C07B20DB84E8000BE1E5 /* MusicPlayer.swift */; };
 		DAEA4A7120E4CBDF00D37884 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA4A7020E4CBDF00D37884 /* Track.swift */; };
@@ -41,16 +63,6 @@
 		DAF587EA20C7BA9C0077AF7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF587E820C7BA9C0077AF7D /* LaunchScreen.storyboard */; };
 		DAFC404C20CF9EFF00CA3DAB /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC404B20CF9EFF00CA3DAB /* HomeTabBarViewController.swift */; };
 		DAFC404E20CF9F6900CA3DAB /* LibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC404D20CF9F6900CA3DAB /* LibraryManager.swift */; };
-		DAFC406920CFABED00CA3DAB /* 02_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405020CFABED00CA3DAB /* 02_01.mp3 */; };
-		DAFC406A20CFABED00CA3DAB /* 02_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405120CFABED00CA3DAB /* 02_02.mp3 */; };
-		DAFC406B20CFABED00CA3DAB /* 02_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405220CFABED00CA3DAB /* 02_03.mp3 */; };
-		DAFC406C20CFABED00CA3DAB /* 02_04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405320CFABED00CA3DAB /* 02_04.mp3 */; };
-		DAFC406D20CFABED00CA3DAB /* 02_05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405420CFABED00CA3DAB /* 02_05.mp3 */; };
-		DAFC406E20CFABED00CA3DAB /* 02_06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405520CFABED00CA3DAB /* 02_06.mp3 */; };
-		DAFC406F20CFABED00CA3DAB /* 02_07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405620CFABED00CA3DAB /* 02_07.mp3 */; };
-		DAFC407020CFABED00CA3DAB /* 02_08.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405720CFABED00CA3DAB /* 02_08.mp3 */; };
-		DAFC407120CFABED00CA3DAB /* AlbumArtSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405820CFABED00CA3DAB /* AlbumArtSmall.jpg */; };
-		DAFC407220CFABED00CA3DAB /* front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405920CFABED00CA3DAB /* front.jpg */; };
 		DAFC407320CFABED00CA3DAB /* 01_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405B20CFABED00CA3DAB /* 01_01.mp3 */; };
 		DAFC407420CFABED00CA3DAB /* 01_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405C20CFABED00CA3DAB /* 01_02.mp3 */; };
 		DAFC407520CFABED00CA3DAB /* 01_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC405D20CFABED00CA3DAB /* 01_03.mp3 */; };
@@ -75,7 +87,7 @@
 		DA3022A620C94A8A007E85E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA3022AA20C94AA9007E85E3 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
-		DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HomeViewController+CollectionView.swift"; path = "New Group1/HomeViewController+CollectionView.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA3022AF20C94D0D007E85E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Jingles/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		DA3022B220C95151007E85E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA33A2F120E4C11600E474AC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +101,28 @@
 		DA9A902020EA28C7008CF4D9 /* AllSongsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSongsTableViewController.swift; sourceTree = "<group>"; };
 		DA9A902620EA512B008CF4D9 /* AlbumCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		DAAD70A420F3656F00CC05A2 /* MiniPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerViewController.swift; sourceTree = "<group>"; };
+		DAB3546B20FF215500A1EB68 /* 02_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_01.mp3; sourceTree = "<group>"; };
+		DAB3546C20FF215500A1EB68 /* 02_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_02.mp3; sourceTree = "<group>"; };
+		DAB3546D20FF215500A1EB68 /* 02_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_03.mp3; sourceTree = "<group>"; };
+		DAB3546E20FF215500A1EB68 /* 02_04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_04.mp3; sourceTree = "<group>"; };
+		DAB3546F20FF215500A1EB68 /* 02_05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_05.mp3; sourceTree = "<group>"; };
+		DAB3547020FF215500A1EB68 /* 02_06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_06.mp3; sourceTree = "<group>"; };
+		DAB3547120FF215500A1EB68 /* 02_07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_07.mp3; sourceTree = "<group>"; };
+		DAB3547220FF215500A1EB68 /* 02_08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_08.mp3; sourceTree = "<group>"; };
+		DAB3547320FF215500A1EB68 /* 02_09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_09.mp3; sourceTree = "<group>"; };
+		DAB3547E20FF215B00A1EB68 /* 03_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_01.mp3; sourceTree = "<group>"; };
+		DAB3547F20FF215B00A1EB68 /* 03_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_02.mp3; sourceTree = "<group>"; };
+		DAB3548020FF215B00A1EB68 /* 03_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_03.mp3; sourceTree = "<group>"; };
+		DAB3548120FF215B00A1EB68 /* 03_04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_04.mp3; sourceTree = "<group>"; };
+		DAB3548220FF215B00A1EB68 /* 03_05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_05.mp3; sourceTree = "<group>"; };
+		DAB3548320FF215B00A1EB68 /* 03_06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_06.mp3; sourceTree = "<group>"; };
+		DAB3548420FF215B00A1EB68 /* 03_07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 03_07.mp3; sourceTree = "<group>"; };
+		DAB3548D20FF224F00A1EB68 /* 04_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_01.mp3; sourceTree = "<group>"; };
+		DAB3548E20FF224F00A1EB68 /* 04_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_02.mp3; sourceTree = "<group>"; };
+		DAB3548F20FF224F00A1EB68 /* 04_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_03.mp3; sourceTree = "<group>"; };
+		DAB3549020FF224F00A1EB68 /* 04_04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_04.mp3; sourceTree = "<group>"; };
+		DAB3549120FF224F00A1EB68 /* 04_05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_05.mp3; sourceTree = "<group>"; };
+		DAB3549220FF224F00A1EB68 /* 04_06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 04_06.mp3; sourceTree = "<group>"; };
 		DACB311520E3B4B20012404F /* YourLibaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourLibaryTableViewController.swift; sourceTree = "<group>"; };
 		DAD7C07B20DB84E8000BE1E5 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		DAEA4A7020E4CBDF00D37884 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -104,16 +138,6 @@
 		DAF587EB20C7BA9C0077AF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFC404B20CF9EFF00CA3DAB /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		DAFC404D20CF9F6900CA3DAB /* LibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
-		DAFC405020CFABED00CA3DAB /* 02_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_01.mp3; sourceTree = "<group>"; };
-		DAFC405120CFABED00CA3DAB /* 02_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_02.mp3; sourceTree = "<group>"; };
-		DAFC405220CFABED00CA3DAB /* 02_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_03.mp3; sourceTree = "<group>"; };
-		DAFC405320CFABED00CA3DAB /* 02_04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_04.mp3; sourceTree = "<group>"; };
-		DAFC405420CFABED00CA3DAB /* 02_05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_05.mp3; sourceTree = "<group>"; };
-		DAFC405520CFABED00CA3DAB /* 02_06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_06.mp3; sourceTree = "<group>"; };
-		DAFC405620CFABED00CA3DAB /* 02_07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_07.mp3; sourceTree = "<group>"; };
-		DAFC405720CFABED00CA3DAB /* 02_08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 02_08.mp3; sourceTree = "<group>"; };
-		DAFC405820CFABED00CA3DAB /* AlbumArtSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlbumArtSmall.jpg; sourceTree = "<group>"; };
-		DAFC405920CFABED00CA3DAB /* front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpg; sourceTree = "<group>"; };
 		DAFC405B20CFABED00CA3DAB /* 01_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01_01.mp3; sourceTree = "<group>"; };
 		DAFC405C20CFABED00CA3DAB /* 01_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01_02.mp3; sourceTree = "<group>"; };
 		DAFC405D20CFABED00CA3DAB /* 01_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01_03.mp3; sourceTree = "<group>"; };
@@ -153,20 +177,20 @@
 		DA3022A320C94A71007E85E3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DA3022A620C94A8A007E85E3 /* HomeViewController.swift */,
-				DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */,
-				DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */,
-				DA2A8B2120DA2D4400B06A1C /* SearchViewController.swift */,
-				DA390FA620DD12BF00F54880 /* MaxiPlayerViewController.swift */,
 				DAD7C07B20DB84E8000BE1E5 /* MusicPlayer.swift */,
-				DA33A2F120E4C11600E474AC /* DiscoverViewController.swift */,
 				DAEA4A7720E4E67800D37884 /* DicoverBarDeligate.swift */,
-				DACB311520E3B4B20012404F /* YourLibaryTableViewController.swift */,
-				DA9A902020EA28C7008CF4D9 /* AllSongsTableViewController.swift */,
-				DA2295F420EB3F4C00326784 /* AllAlbumsCollectionViewController.swift */,
-				DAF4E78820ECA60D00E4EF30 /* AllArtistsTableViewController.swift */,
+				DA3022A620C94A8A007E85E3 /* HomeViewController.swift */,
 				DAF4E78A20ECAAA600E4EF30 /* SongsFromCollection.swift */,
+				DA2A8B2120DA2D4400B06A1C /* SearchViewController.swift */,
+				DA33A2F120E4C11600E474AC /* DiscoverViewController.swift */,
 				DAAD70A420F3656F00CC05A2 /* MiniPlayerViewController.swift */,
+				DA390FA620DD12BF00F54880 /* MaxiPlayerViewController.swift */,
+				DA9A902020EA28C7008CF4D9 /* AllSongsTableViewController.swift */,
+				DAF4E78820ECA60D00E4EF30 /* AllArtistsTableViewController.swift */,
+				DACB311520E3B4B20012404F /* YourLibaryTableViewController.swift */,
+				DA2EFD3B20D24A1F00025223 /* HomeViewController+TablelView.swift */,
+				DA2295F420EB3F4C00326784 /* AllAlbumsCollectionViewController.swift */,
+				DA3022AC20C94BD8007E85E3 /* HomeViewController+CollectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,9 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				DA3022AE20C94D0D007E85E3 /* Home.storyboard */,
-				DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */,
-				DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */,
 				DAEA4A7220E4E2D500D37884 /* TrackCell.swift */,
+				DA2EFD3920D23D5200025223 /* HomeTableViewCell.swift */,
+				DA3022A820C94A9E007E85E3 /* HomeItemCollectionViewCell.swift */,
 				DA9A902620EA512B008CF4D9 /* AlbumCellCollectionViewCell.swift */,
 			);
 			path = View;
@@ -186,13 +210,13 @@
 		DA3022A520C94A7D007E85E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA3022AA20C94AA9007E85E3 /* HomeItem.swift */,
 				DAFC404D20CF9F6900CA3DAB /* LibraryManager.swift */,
+				DA3022AA20C94AA9007E85E3 /* HomeItem.swift */,
 				DA9515EE20D0F85500A7807D /* Source.swift */,
 				DA9515F020D0F98600A7807D /* Album.swift */,
+				DA9515F620D0FB2500A7807D /* Song.swift */,
 				DA9515F220D0FA1A00A7807D /* Artist.swift */,
 				DA9515F420D0FA7F00A7807D /* Genre.swift */,
-				DA9515F620D0FB2500A7807D /* Song.swift */,
 				DAEA4A7020E4CBDF00D37884 /* Track.swift */,
 			);
 			path = Model;
@@ -212,6 +236,49 @@
 				DA33A2F420E4C72000E474AC /* QueryService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		DAB3546A20FF215500A1EB68 /* 02 */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3546B20FF215500A1EB68 /* 02_01.mp3 */,
+				DAB3546C20FF215500A1EB68 /* 02_02.mp3 */,
+				DAB3546D20FF215500A1EB68 /* 02_03.mp3 */,
+				DAB3546E20FF215500A1EB68 /* 02_04.mp3 */,
+				DAB3546F20FF215500A1EB68 /* 02_05.mp3 */,
+				DAB3547020FF215500A1EB68 /* 02_06.mp3 */,
+				DAB3547120FF215500A1EB68 /* 02_07.mp3 */,
+				DAB3547220FF215500A1EB68 /* 02_08.mp3 */,
+				DAB3547320FF215500A1EB68 /* 02_09.mp3 */,
+			);
+			path = 02;
+			sourceTree = "<group>";
+		};
+		DAB3547D20FF215B00A1EB68 /* 03 */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3547E20FF215B00A1EB68 /* 03_01.mp3 */,
+				DAB3547F20FF215B00A1EB68 /* 03_02.mp3 */,
+				DAB3548020FF215B00A1EB68 /* 03_03.mp3 */,
+				DAB3548120FF215B00A1EB68 /* 03_04.mp3 */,
+				DAB3548220FF215B00A1EB68 /* 03_05.mp3 */,
+				DAB3548320FF215B00A1EB68 /* 03_06.mp3 */,
+				DAB3548420FF215B00A1EB68 /* 03_07.mp3 */,
+			);
+			path = 03;
+			sourceTree = "<group>";
+		};
+		DAB3548C20FF224F00A1EB68 /* 04 */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3548D20FF224F00A1EB68 /* 04_01.mp3 */,
+				DAB3548E20FF224F00A1EB68 /* 04_02.mp3 */,
+				DAB3548F20FF224F00A1EB68 /* 04_03.mp3 */,
+				DAB3549020FF224F00A1EB68 /* 04_04.mp3 */,
+				DAB3549120FF224F00A1EB68 /* 04_05.mp3 */,
+				DAB3549220FF224F00A1EB68 /* 04_06.mp3 */,
+			);
+			path = 04;
 			sourceTree = "<group>";
 		};
 		DAF587D320C7BA960077AF7D = {
@@ -251,27 +318,12 @@
 		DAFC3FC920CE7F6B00CA3DAB /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				DAB3548C20FF224F00A1EB68 /* 04 */,
+				DAB3547D20FF215B00A1EB68 /* 03 */,
+				DAB3546A20FF215500A1EB68 /* 02 */,
 				DAFC405A20CFABED00CA3DAB /* 01 */,
-				DAFC404F20CFABED00CA3DAB /* 02 */,
 			);
 			path = Music;
-			sourceTree = "<group>";
-		};
-		DAFC404F20CFABED00CA3DAB /* 02 */ = {
-			isa = PBXGroup;
-			children = (
-				DAFC405020CFABED00CA3DAB /* 02_01.mp3 */,
-				DAFC405120CFABED00CA3DAB /* 02_02.mp3 */,
-				DAFC405220CFABED00CA3DAB /* 02_03.mp3 */,
-				DAFC405320CFABED00CA3DAB /* 02_04.mp3 */,
-				DAFC405420CFABED00CA3DAB /* 02_05.mp3 */,
-				DAFC405520CFABED00CA3DAB /* 02_06.mp3 */,
-				DAFC405620CFABED00CA3DAB /* 02_07.mp3 */,
-				DAFC405720CFABED00CA3DAB /* 02_08.mp3 */,
-				DAFC405820CFABED00CA3DAB /* AlbumArtSmall.jpg */,
-				DAFC405920CFABED00CA3DAB /* front.jpg */,
-			);
-			path = 02;
 			sourceTree = "<group>";
 		};
 		DAFC405A20CFABED00CA3DAB /* 01 */ = {
@@ -353,33 +405,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB3548620FF215B00A1EB68 /* 03_02.mp3 in Resources */,
+				DAB3548720FF215B00A1EB68 /* 03_03.mp3 in Resources */,
 				DAFC407520CFABED00CA3DAB /* 01_03.mp3 in Resources */,
 				DAFC407320CFABED00CA3DAB /* 01_01.mp3 in Resources */,
-				DAFC406E20CFABED00CA3DAB /* 02_06.mp3 in Resources */,
-				DAFC406C20CFABED00CA3DAB /* 02_04.mp3 in Resources */,
-				DAFC407120CFABED00CA3DAB /* AlbumArtSmall.jpg in Resources */,
 				DAFC407C20CFABED00CA3DAB /* 01_10.mp3 in Resources */,
-				DAFC406920CFABED00CA3DAB /* 02_01.mp3 in Resources */,
 				DAFC407B20CFABED00CA3DAB /* 01_09.mp3 in Resources */,
 				DAFC407A20CFABED00CA3DAB /* 01_08.mp3 in Resources */,
+				DAB3549520FF225000A1EB68 /* 04_03.mp3 in Resources */,
 				DAFC407920CFABED00CA3DAB /* 01_07.mp3 in Resources */,
 				DAFC407620CFABED00CA3DAB /* 01_04.mp3 in Resources */,
+				DAB3549320FF225000A1EB68 /* 04_01.mp3 in Resources */,
+				DAB3547B20FF215500A1EB68 /* 02_08.mp3 in Resources */,
+				DAB3549820FF225000A1EB68 /* 04_06.mp3 in Resources */,
 				DAF587EA20C7BA9C0077AF7D /* LaunchScreen.storyboard in Resources */,
+				DAB3547920FF215500A1EB68 /* 02_06.mp3 in Resources */,
+				DAB3547C20FF215500A1EB68 /* 02_09.mp3 in Resources */,
 				DAFC407420CFABED00CA3DAB /* 01_02.mp3 in Resources */,
 				DAFC407E20CFABED00CA3DAB /* 01_12.mp3 in Resources */,
+				DAB3548820FF215B00A1EB68 /* 03_04.mp3 in Resources */,
+				DAB3547620FF215500A1EB68 /* 02_03.mp3 in Resources */,
+				DAB3549420FF225000A1EB68 /* 04_02.mp3 in Resources */,
 				DAFC407720CFABED00CA3DAB /* 01_05.mp3 in Resources */,
 				DAFC407820CFABED00CA3DAB /* 01_06.mp3 in Resources */,
+				DAB3547720FF215500A1EB68 /* 02_04.mp3 in Resources */,
 				DAFC407D20CFABED00CA3DAB /* 01_11.mp3 in Resources */,
-				DAFC406A20CFABED00CA3DAB /* 02_02.mp3 in Resources */,
+				DAB3548920FF215B00A1EB68 /* 03_05.mp3 in Resources */,
 				DAF587E720C7BA9C0077AF7D /* Assets.xcassets in Resources */,
-				DAFC406D20CFABED00CA3DAB /* 02_05.mp3 in Resources */,
+				DAB3548B20FF215B00A1EB68 /* 03_07.mp3 in Resources */,
 				DAFC407F20CFABED00CA3DAB /* 01_13.mp3 in Resources */,
+				DAB3547A20FF215500A1EB68 /* 02_07.mp3 in Resources */,
 				DAFC408020CFABED00CA3DAB /* 01_14.mp3 in Resources */,
-				DAFC406B20CFABED00CA3DAB /* 02_03.mp3 in Resources */,
-				DAFC407220CFABED00CA3DAB /* front.jpg in Resources */,
-				DAFC407020CFABED00CA3DAB /* 02_08.mp3 in Resources */,
+				DAB3547420FF215500A1EB68 /* 02_01.mp3 in Resources */,
 				DAF587E520C7BA970077AF7D /* Main.storyboard in Resources */,
-				DAFC406F20CFABED00CA3DAB /* 02_07.mp3 in Resources */,
+				DAB3549720FF225000A1EB68 /* 04_05.mp3 in Resources */,
+				DAB3548A20FF215B00A1EB68 /* 03_06.mp3 in Resources */,
+				DAB3547820FF215500A1EB68 /* 02_05.mp3 in Resources */,
+				DAB3548520FF215B00A1EB68 /* 03_01.mp3 in Resources */,
+				DAB3549620FF225000A1EB68 /* 04_04.mp3 in Resources */,
+				DAB3547520FF215500A1EB68 /* 02_02.mp3 in Resources */,
 				DA3022B020C94D0D007E85E3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3VRTBC9WN;
 				INFOPLIST_FILE = Jingles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,6 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3VRTBC9WN;
 				INFOPLIST_FILE = Jingles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

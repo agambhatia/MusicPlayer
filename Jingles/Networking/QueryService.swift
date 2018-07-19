@@ -73,8 +73,7 @@ class QueryService {
                 let previewURL = URL(string: previewURLString),
                 let name = trackDictionary["trackName"] as? String,
                 let artist = trackDictionary["artistName"] as? String {
-                 tracks.append(Track(name: name, artist: artist, previewURL: previewURL, index: index))
-               
+                tracks.append(Track(name: name, artist: artist, previewURL: previewURL, index: index))
                 index += 1
             } else {
                 errorMessage += "Problem parsing trackDictionary\n"

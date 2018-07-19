@@ -14,6 +14,7 @@ import AVFoundation
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -24,7 +25,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Source.URLs.songs.count
-    
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -32,7 +32,22 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                                                                 for: indexPath) as? HomeItemCollectionViewCell else {
                                                                     return UICollectionViewCell()
         }	
-        
+        if indexPath.section == 0 {
+            if MusicPlayer.shared.recents.count == 0
+            {
+                itemCell.songTitleLabel.text = "Not Playing"
+                itemCell.artistNameLabel.text = " N/A "
+                itemCell.imageView.image = #imageLiteral(resourceName: "icons8-drums-100")
+                return itemCell
+            }
+            else
+            {
+                itemCell.songTitleLabel.text = MusicPlayer.shared.recents[indexPath.row].title
+                itemCell.artistNameLabel.text = MusicPlayer.shared.recents[indexPath.row].album
+                itemCell.imageView.image = MusicPlayer.shared.recents[indexPath.row].albumArt
+                return itemCell
+            }
+        }
        
         
         itemCell.songTitleLabel?.text = LibraryManager.shared.songs[indexPath.row].title
@@ -43,12 +58,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let rowItem = LibraryManager.shared.songs[indexPath.row]
-        
         print(rowItem.fileURL)
         MusicPlayer.shared.play(song: rowItem)
         
-    
-            print("User selected \(rowItem.title)")
+        print("User selected \(rowItem.title)")
     }
     
         

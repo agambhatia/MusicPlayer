@@ -15,6 +15,7 @@ class AllAlbumsCollectionViewController: UICollectionViewController, UICollectio
     override func viewDidLoad() {
         
         super.viewDidLoad()
+    self.collectionView?.contentInset = UIEdgeInsetsMake(0.0, 0.0, 67.0, 0.0)
 
         
     }
@@ -53,7 +54,7 @@ class AllAlbumsCollectionViewController: UICollectionViewController, UICollectio
        let album = LibraryManager.shared.album[indexPath.row]
         cell.configure(album: album)
         cell.albumNameLabel.textColor = UIColor.white
-        cell.albumNameLabel.highlightedTextColor = UIColor.orange
+        cell.albumNameLabel.highlightedTextColor = UIColor.black
        return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

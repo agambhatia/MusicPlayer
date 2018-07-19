@@ -23,5 +23,8 @@ class HomeTableViewCell: UITableViewCell {
 
         
     }
+    
+    
+    // collection view
 
 }

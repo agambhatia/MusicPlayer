@@ -14,16 +14,13 @@ class HomeItemCollectionViewCell: UICollectionViewCell {
         let margins: CGFloat = 2*16.0
         let interCellSpacing: CGFloat = 16.0
         let width = UIScreen.main.bounds.width
-
         let availableWidth = width - margins - interCellSpacing
-        
         let height = availableWidth + 50.0
         
         return CGSize(width: width, height: height)
     }
     
     @IBOutlet var imageView: UIImageView!
-   
     @IBOutlet var songTitleLabel: UILabel!
     @IBOutlet var artistNameLabel: UILabel!
     

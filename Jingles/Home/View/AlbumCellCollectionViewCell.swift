@@ -11,7 +11,7 @@ import UIKit
 class AlbumCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
-    
+        @IBOutlet var backImage: UIImageView!
     @IBOutlet var albumNameLabel: UILabel!
     
     func configure(album: Album) {

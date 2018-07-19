@@ -9,31 +9,40 @@
 import UIKit
 
 class HomeTabBarViewController: UITabBarController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       LibraryManager.shared.initialise()
-        
-        
-
-        // Do any additional setup after loading the view.
-        
-        let originX: CGFloat = 0.0
-        let controller:MiniPlayerViewController = self.storyboard!.instantiateViewController(withIdentifier: "MiniPlayerViewController") as! MiniPlayerViewController
-        let height: CGFloat = 67.0  //controller.view.bounds.height
-        let width = controller.view.bounds.width
-        let originY = view.bounds.height - tabBar.bounds.height - height
-        
-       controller.view.frame = CGRect(x: originX, y: originY, width: width, height: height)
+    var nowPlaying = false
     
-        self.view.addSubview(controller.view)
+    override func viewDidLoad() {
         
+        super.viewDidLoad()
+        LibraryManager.shared.initialise()
+        update()
     }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @objc func miniPlayerTapped() {
+        performSegue(withIdentifier: "ShowMaxiPlayer", sender: self)
+        
+    }
+  
+    func update()
+    {
+         let controller:MiniPlayerViewController = self.storyboard!.instantiateViewController(withIdentifier: "MiniPlayerViewController") as! MiniPlayerViewController
+        let tapGestureRecogniser = UITapGestureRecognizer.init(target: self, action: #selector(miniPlayerTapped))
+        controller.view.addGestureRecognizer(tapGestureRecogniser)
+        let originX: CGFloat = 0.0
+        let height: CGFloat = 67.0  //controller.view.bounds.height
+        let width = controller.view.bounds.width
+        let originY = view.bounds.height - tabBar.bounds.height - height
+        controller.view.frame = CGRect(x: originX, y: originY, width: width, height: height)
+    
+        self.view.addSubview(controller.view)
+    }
+   
 
     /*
     // MARK: - Navigation
@@ -44,5 +53,6 @@ class HomeTabBarViewController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-
+   
+    
 }

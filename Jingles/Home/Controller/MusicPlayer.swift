@@ -10,17 +10,22 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
+protocol SongIsPlayingDelegate{
+    func didPlaySong(played: Bool)
+}
 
-public class MusicPlayer {
-    
+public class MusicPlayer{
     static let shared = MusicPlayer()
-    
-    var currentSong: Song?
+
     var nextSong: Song?
     var prevSong: Song?
+    var recents: [Song] = []
+    var currentSong: Song?
     var player: AVAudioPlayer?
-
-    func play(song: Song ) {
+    var delegate: SongIsPlayingDelegate?
+    var recentsDelegate: SongIsPlayingDelegate?
+    
+    func play(song: Song) {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -33,46 +38,53 @@ public class MusicPlayer {
             
             currentSong = song
             player.play()
+            includeInRecents(song: song)
             fetchNextSong()
             fetchPrevSong()
-
-        } catch let error {
+            delegate?.didPlaySong(played: player.isPlaying)
+            recentsDelegate?.didPlaySong(played: player.isPlaying)
+                } catch let error {
             print(error.localizedDescription)
         }
     }
     
-    func fetchNextSong()
-    {
+    func pausePlayer() {
+        guard let player = player else {
+            return
+        }
+        
+        player.pause()
+        delegate?.didPlaySong(played: player.isPlaying)
+    }
+    
+    func fetchNextSong() {
         var j = 0
-        while currentSong?.title != LibraryManager.shared.songs[j].title && j < LibraryManager.shared.songs.count
-        {
+        while currentSong?.title != LibraryManager.shared.songs[j].title && j < LibraryManager.shared.songs.count {
             j += 1
         }
-        if j == LibraryManager.shared.songs.count-1
-        {
+        if j == LibraryManager.shared.songs.count - 1 {
             nextSong = LibraryManager.shared.songs[0]
-        }
-        else
-        {
+        } else {
             nextSong = LibraryManager.shared.songs[j+1]
         }
     }
-    func fetchPrevSong()
-    {
+    
+    func fetchPrevSong() {
         var i = 0
-         while currentSong?.title != LibraryManager.shared.songs[i].title && i < LibraryManager.shared.songs.count
-         {
+         while currentSong?.title != LibraryManager.shared.songs[i].title && i < LibraryManager.shared.songs.count {
             i += 1
         }
-        if i == 0
-        {
+        if i == 0 {
             prevSong = LibraryManager.shared.songs[LibraryManager.shared.songs.count-1]
-        }
-        else
-        {
+        } else {
             prevSong = LibraryManager.shared.songs[i-1]
         }
-        
     }
-    
+    func  includeInRecents(song: Song){
+        if recents.count == 10
+        {
+            recents.remove(at: 9)
+        }
+        recents.insert(song, at: 0)
+    }
 }

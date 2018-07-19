@@ -10,7 +10,6 @@ import UIKit
 
 class MaxiPlayerViewController: UIViewController {
     
-    
     var shuffleOn: Bool = false
     var repeatOn: Bool = false
     var nowPlaying: Bool = true
@@ -19,9 +18,6 @@ class MaxiPlayerViewController: UIViewController {
     var nextSong : Song?
     var prevSong: Song?
     
-    
-    
-    
     @IBOutlet var playButton: UIButton!
     @IBOutlet var artistLabel: UILabel!
     @IBOutlet var playerImage: UIImageView!
@@ -29,13 +25,34 @@ class MaxiPlayerViewController: UIViewController {
     @IBOutlet var seekSlider: UISlider!
     @IBOutlet var shuffleButton: UIButton!
     @IBOutlet var repeatButton: UIButton!
-    
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var prevButton: UIButton!
+    @IBOutlet var playerBackgroundImage: UIImageView!
     func updateViewForCurrentSong(){
+        
+        if MusicPlayer.shared.player?.isPlaying == nil
+        {
+            playButton.setImage(#imageLiteral(resourceName: "icons8-play-button-circled-filled-50"), for: .normal)
+            artistLabel.text = " "
+            titleLabel.text = "Not Playing"
+            playerImage.image = #imageLiteral(resourceName: "youngMountain")
+            seekSlider.isEnabled = false
+            repeatButton.isEnabled = false
+            shuffleButton.isEnabled = false
+            nextButton.isEnabled = false
+            prevButton.isEnabled = false
+            }
+        else {
+            seekSlider.isEnabled = true
+            repeatButton.isEnabled = true
+            shuffleButton.isEnabled = true
+            nextButton.isEnabled = true
+            prevButton.isEnabled = true
+        }
+        
         guard let currentlyPlayingSong = MusicPlayer.shared.currentSong else {
             return
         }
-        
-        
         guard let  next = MusicPlayer.shared.nextSong else{
             return
         }
@@ -48,34 +65,27 @@ class MaxiPlayerViewController: UIViewController {
 
         artistLabel.text = currentlyPlayingSong.artist
         titleLabel.text = currentlyPlayingSong.title
+        playerImage.image = currentlyPlayingSong.albumArt
+        playerBackgroundImage.image = currentlyPlayingSong.albumArt
         seekSlider.maximumValue = Float((MusicPlayer.shared.player?.duration)!)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateViewForCurrentSong()
-        
+        let swipeGestureRecogniser = UISwipeGestureRecognizer.init(target: self, action: #selector(dismissMaxiPlayer))
+        swipeGestureRecogniser.direction = .down
+        self.view.addGestureRecognizer(swipeGestureRecogniser)
+           }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         updateViewForCurrentSong()
         makeTimer()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+            }
     
     @IBAction func shuffleButtonClicked(_ sender: Any) {
         shuffleOn = !shuffleOn
@@ -92,26 +102,32 @@ class MaxiPlayerViewController: UIViewController {
         if repeatOn{
             repeatButton.setImage(#imageLiteral(resourceName: "icons8-repeat-24"), for: .normal)
             MusicPlayer.shared.player?.numberOfLoops = -1
-            
-            
-        } else{
+        }
+        else {
             repeatButton.setImage(#imageLiteral(resourceName: "icons8-repeat-white"), for: .normal)
             MusicPlayer.shared.player?.numberOfLoops = 0
-            
         }
     }
     
     @IBAction func playButtonClicked(_ sender: Any) {
-        nowPlaying = !nowPlaying
-        if nowPlaying{
+        if MusicPlayer.shared.player?.isPlaying == nil{
+            MusicPlayer.shared.play(song: LibraryManager.shared.songs[Int(arc4random_uniform(UInt32(LibraryManager.shared.songs.count)))])
+            updateViewForCurrentSong()
             playButton.setImage(#imageLiteral(resourceName: "icons8-pause-button-filled-50"), for: .normal)
-            MusicPlayer.shared.player?.play()
-            
-        } else {
+            return
+        }
+        nowPlaying = !nowPlaying
+        if MusicPlayer.shared.player?.isPlaying == true {
+           
             playButton.setImage(#imageLiteral(resourceName: "icons8-play-button-circled-filled-50"), for: .normal)
             MusicPlayer.shared.player?.pause()
+            MusicPlayer.shared.delegate?.didPlaySong(played: false)
+            
+        } else {
+            playButton.setImage(#imageLiteral(resourceName: "icons8-pause-button-filled-50"), for: .normal)
+            MusicPlayer.shared.player?.play()
+            MusicPlayer.shared.delegate?.didPlaySong(played: true)
         }
-        
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
@@ -127,6 +143,7 @@ class MaxiPlayerViewController: UIViewController {
         {
             MusicPlayer.shared.play(song: nextSong!)
         }
+        playButton.setImage(#imageLiteral(resourceName: "icons8-pause-button-filled-50"), for: .normal)
         updateViewForCurrentSong()
         
     }
@@ -144,6 +161,7 @@ class MaxiPlayerViewController: UIViewController {
         {
             MusicPlayer.shared.play(song: prevSong!)
         }
+        playButton.setImage(#imageLiteral(resourceName: "icons8-pause-button-filled-50"), for: .normal)
         updateViewForCurrentSong()
     }
     
@@ -151,7 +169,6 @@ class MaxiPlayerViewController: UIViewController {
         MusicPlayer.shared.player?.currentTime = Double(seekSlider.value)
         seekSlider.setValue(seekSlider.value, animated: true)
         //        MusicPlayer.shared.player?.play()
-        
     }
     
     @IBAction func seekSliderTouchDown(_ sender: Any) {
@@ -164,20 +181,21 @@ class MaxiPlayerViewController: UIViewController {
     @IBAction func seekSliderTouchUpInside(_ sender: Any) {
         isDraggingTimeSlider = false
     }
+    
+    //MARK: DISMISS VIEWCONTROLLER
+    @objc func dismissMaxiPlayer() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
-
 
 extension MaxiPlayerViewController {
     
     // Timer
-    
     func makeTimer() {
         // This function sets up the timer.
         if audioTimer != nil {
             audioTimer!.invalidate()
         }
-        
-        
         audioTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(onTimer(timer:)), userInfo: nil, repeats: true)
     }
     
@@ -185,9 +203,7 @@ extension MaxiPlayerViewController {
         guard let currentTime =  MusicPlayer.shared.player?.currentTime, let duration =  MusicPlayer.shared.player?.duration else {
             return
         }
-        
         let percentCompleted = currentTime
-        
         // Everything is cool so update the timeLabel and progress bar
         //        seekSlider.value = Float(percentCompleted)
         //seekSlider.setValue(Float(percentCompleted), animated: true)
@@ -205,10 +221,12 @@ extension MaxiPlayerViewController {
             {
                 nowPlaying = false
                 playButton.setImage(#imageLiteral(resourceName: "icons8-play-button-circled-filled-50"), for: .normal)
-                
             }
-            
         }
+        updateViewForCurrentSong()
     }
-    
 }
+
+
+
+

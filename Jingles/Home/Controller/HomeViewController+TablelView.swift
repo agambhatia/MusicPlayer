@@ -7,12 +7,16 @@
 //
 
 import UIKit
-
-
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
+        if indexPath.section == 0 {
+                collectionViewData = MusicPlayer.shared.recents
+        } else {
+            collectionViewData = LibraryManager.shared.songs
+        }
+
+        cell.homeCollectionView.reloadData()
         
         return cell
     }
@@ -35,7 +39,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         case 0: return "Recently Played"
         case 1: return "Recently Added"
         default: return " "
-            
         }
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
@@ -45,7 +48,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.textAlignment = .center
        
     }
-    
 }
 
 
