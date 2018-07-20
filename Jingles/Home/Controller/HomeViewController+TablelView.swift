@@ -16,7 +16,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             collectionViewData = LibraryManager.shared.songs
         }
 
-        cell.homeCollectionView.reloadData()
+        cell.collectionViewDataSource = collectionViewData
         
         return cell
     }

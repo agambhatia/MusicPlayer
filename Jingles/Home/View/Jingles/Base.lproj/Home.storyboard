@@ -95,8 +95,8 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="Fto-od-NlV" id="Sai-T3-zWb"/>
-                                                        <outlet property="delegate" destination="Fto-od-NlV" id="iiM-XQ-B4v"/>
+                                                        <outlet property="dataSource" destination="Zo1-JP-mgY" id="rnP-2d-PpM"/>
+                                                        <outlet property="delegate" destination="Zo1-JP-mgY" id="VVO-DK-daj"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>

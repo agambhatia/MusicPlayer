@@ -125,7 +125,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         
         if searchActive && filtered.isEmpty == false{
             song = filtered[indexPath.row]
-        }
+         }
         else
         {
             song = source[indexPath.row]

@@ -37,9 +37,8 @@ class HomeViewController: UIViewController, SongIsPlayingDelegate{
         super.didReceiveMemoryWarning()
     }
     func didPlaySong(played: Bool) {
-        if played == true{
             tableView.reloadData()
         }
     }
-}
+
 

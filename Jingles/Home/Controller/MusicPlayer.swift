@@ -81,6 +81,15 @@ public class MusicPlayer{
         }
     }
     func  includeInRecents(song: Song){
+        for i in 0..<recents.count
+        {
+         if song.title == recents[i].title
+         {
+            recents.remove(at: i)
+            break
+            }
+        }
+        
         if recents.count == 10
         {
             recents.remove(at: 9)

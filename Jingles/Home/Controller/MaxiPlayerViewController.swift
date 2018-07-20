@@ -35,7 +35,7 @@ class MaxiPlayerViewController: UIViewController {
             playButton.setImage(#imageLiteral(resourceName: "icons8-play-button-circled-filled-50"), for: .normal)
             artistLabel.text = " "
             titleLabel.text = "Not Playing"
-            playerImage.image = #imageLiteral(resourceName: "youngMountain")
+            playerImage.image = #imageLiteral(resourceName: "iTunesArtwork")
             seekSlider.isEnabled = false
             repeatButton.isEnabled = false
             shuffleButton.isEnabled = false
@@ -204,10 +204,8 @@ extension MaxiPlayerViewController {
             return
         }
         let percentCompleted = currentTime
-        // Everything is cool so update the timeLabel and progress bar
         //        seekSlider.value = Float(percentCompleted)
         //seekSlider.setValue(Float(percentCompleted), animated: true)
-        // Check that we aren't dragging the time slider before updating it
         
         if !isDraggingTimeSlider {
             
