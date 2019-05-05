@@ -3,4 +3,4 @@ Music player for iOS devices developedas a 2 month internship project , currentl
 
 Feel Free to use it up if you want to and make any additions. 
 
-Enjoy a few songs by "This will destroy you" xD 
+Enjoy a few songs by, "This will destroy you" xD 
